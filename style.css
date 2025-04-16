@@ -1,0 +1,173 @@
+/* CSS for Complete HTML & CSS Guide */
+
+/* Text Styling */
+.highlight {
+    color: red;
+  }
+  
+  #main {
+    background: #eee;
+  }
+  
+  p:hover {
+    background: yellow;
+  }
+  
+  /* Box Model */
+  .box-model {
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black;
+  }
+  
+  /* Flexbox */
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Grid Layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+  }
+  
+  /* Responsive Text */
+  body {
+    font-size: 18px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Animation */
+  .box {
+    width: 100px;
+    height: 100px;
+    background: coral;
+    animation: spin 2s infinite linear;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Transition */
+  .transition-button {
+    background: blue;
+    color: white;
+    transition: background 0.3s;
+  }
+  
+  .transition-button:hover {
+    background: darkblue;
+  }
+  
+  /* CSS Variables */
+  :root {
+    --main-color: #4caf50;
+  }
+  
+  .css-var {
+    color: var(--main-color);
+  }
+  
+  /* Light/Dark Theme */
+  body.light {
+    background: #fff;
+    color: #000;
+  }
+  
+  body.dark {
+    background: #121212;
+    color: #fff;
+  }
+  
+  /* Custom Checkbox */
+  input[type="checkbox"].custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  input[type="checkbox"].custom-checkbox:checked::before {
+    content: "✔";
+    position: absolute;
+    left: 3px;
+    top: -2px;
+    color: green;
+  }
+  
+  /* Circle Shape */
+  .circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    clip-path: circle(50%);
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Responsive Media */
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Button Styling */
+  button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Utility Classes */
+  .text-center {
+    text-align: center;
+  }
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  .pt-4 {
+    padding-top: 1rem;
+  }
+  
+  /* Accessible Hidden */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(50%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
