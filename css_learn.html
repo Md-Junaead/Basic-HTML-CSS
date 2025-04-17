@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All-in-One CSS</title>
+  <style>
+    /* =========================
+       BASIC SELECTORS
+    ========================= */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+    }
+
+    .highlight {
+      color: red;
+    }
+
+    #unique {
+      font-weight: bold;
+    }
+
+    /* =========================
+       BOX MODEL
+    ========================= */
+    .box {
+      padding: 20px;
+      margin: 10px;
+      border: 2px solid #333;
+      background-color: white;
+    }
+
+    /* =========================
+       POSITIONING
+    ========================= */
+    .relative {
+      position: relative;
+      top: 10px;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+
+    .fixed {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    /* =========================
+       FLEXBOX
+    ========================= */
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .flex-item {
+      padding: 10px;
+      background-color: #ddd;
+    }
+
+    /* =========================
+       GRID
+    ========================= */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .grid-item {
+      background-color: #ccc;
+      padding: 10px;
+    }
+
+    /* =========================
+       TRANSITIONS & ANIMATIONS
+    ========================= */
+    .transition {
+      transition: all 0.3s ease;
+    }
+
+    .transition:hover {
+      transform: scale(1.1);
+      background-color: lightblue;
+    }
+
+    @keyframes slide {
+      from { transform: translateX(0); }
+      to { transform: translateX(100px); }
+    }
+
+    .animated {
+      animation: slide 2s infinite alternate;
+    }
+
+    /* =========================
+       RESPONSIVE DESIGN
+    ========================= */
+    @media (max-width: 600px) {
+      .responsive {
+        background-color: yellow;
+      }
+    }
+
+    /* =========================
+       CUSTOM PROPERTIES (CSS VARIABLES)
+    ========================= */
+    :root {
+      --main-color: #007BFF;
+      --padding: 20px;
+    }
+
+    .custom {
+      color: var(--main-color);
+      padding: var(--padding);
+    }
+
+    /* =========================
+       ADVANCED SELECTORS
+    ========================= */
+    ul li:first-child {
+      color: green;
+    }
+
+    ul li:last-child {
+      color: blue;
+    }
+
+    ul li:nth-child(even) {
+      background-color: #eee;
+    }
+
+    /* =========================
+       PSEUDO-ELEMENTS
+    ========================= */
+    .pseudo::before {
+      content: "★ ";
+      color: gold;
+    }
+
+    .pseudo::after {
+      content: " ✓";
+      color: green;
+    }
+
+    /* =========================
+       DARK MODE SUPPORT
+    ========================= */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111;
+        color: #eee;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>All-in-One CSS Demo</h1>
+  <p class="highlight">This is a highlighted paragraph.</p>
+  <p id="unique">This is unique.</p>
+
+  <div class="box">Box Model Example</div>
+
+  <div class="relative box">Relative</div>
+  <div class="absolute box">Absolute</div>
+  <div class="fixed box">Fixed</div>
+
+  <div class="flex-container box">
+    <div class="flex-item">Flex 1</div>
+    <div class="flex-item">Flex 2</div>
+    <div class="flex-item">Flex 3</div>
+  </div>
+
+  <div class="grid-container box">
+    <div class="grid-item">Grid 1</div>
+    <div class="grid-item">Grid 2</div>
+    <div class="grid-item">Grid 3</div>
+  </div>
+
+  <div class="transition box">Hover me (Transition)</div>
+  <div class="animated box">I move (Animation)</div>
+
+  <div class="responsive box">Resize window (Responsive)</div>
+
+  <div class="custom box">Using CSS Variables</div>
+
+  <ul class="box">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+    <li>Fourth item</li>
+  </ul>
+
+  <p class="pseudo box">With Pseudo Elements</p>
+</body>
+</html>
